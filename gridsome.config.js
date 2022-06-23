@@ -6,5 +6,19 @@
 
 module.exports = {
   siteName: "Gridsome",
-  plugins: [],
+  plugins: [
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "src/pages/markdown/**/*.md",
+        typeName: "Post",
+        remark: {
+          // remark options
+        },
+      },
+      templates: {
+        BlogPost: "/markdown/:year/:month/:day/:slug",
+      },
+    },
+  ],
 };
