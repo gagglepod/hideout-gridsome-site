@@ -19,6 +19,17 @@ module.exports = {
       templates: {
         BlogPost: "/markdown/:year/:month/:day/:slug",
       },
+      use: "@gridsome/source-wordpress",
+      options: {
+        baseUrl: "http://kylebondo.com/index.php", // required
+        apiBase: "wp-json",
+        typeName: "WordPress",
+        perPage: 100,
+        concurrent: 10,
+      },
+      templates: {
+        WordPressPost: "/:slug",
+      },
     },
   ],
 };
