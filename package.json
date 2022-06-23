@@ -1,0 +1,13 @@
+{
+  "name": "hideout-gridsome-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/transformer-remark": "^0.6.4",
+    "gridsome": "^0.7.0"
+  }
+}
